@@ -1,0 +1,225 @@
+/* Colors
+ ******************************/
+/* Primary
+ ***************/
+/* Neutral
+ ***************/
+/* Global Variables
+ ******************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+html picture,
+body picture {
+  display: flex;
+}
+html a,
+body a {
+  text-decoration: none;
+}
+
+/* Body Variables
+ ******************************/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-grid-section {
+  padding: 71px 24px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  padding: 26px 32px 32px;
+  border-radius: 8px;
+  max-width: 540px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card__author {
+  display: flex;
+  gap: 17px;
+}
+.card__img {
+  border-radius: 50%;
+}
+.card__name {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+}
+.card__status {
+  margin-top: 4px;
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.card__title {
+  margin-top: 18px;
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.card__subtitle {
+  margin-top: 16px;
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+.card--daniel {
+  background-color: hsl(263, 55%, 52%);
+}
+.card--daniel > * {
+  z-index: 1;
+}
+.card--daniel .card__bg-icon {
+  position: absolute;
+  top: 0px;
+  right: 80px;
+}
+.card--daniel .card__img {
+  outline: 2px solid hsl(264, 82%, 70%);
+}
+.card--daniel .card__name,
+.card--daniel .card__status,
+.card--daniel .card__title {
+  color: hsl(0, 0%, 100%);
+}
+.card--daniel .card__subtitle {
+  margin-top: 40px;
+  color: hsl(0, 0%, 81%);
+}
+.card--jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+.card--jonathan .card__name,
+.card--jonathan .card__status,
+.card--jonathan .card__title,
+.card--jonathan .card__subtitle {
+  color: hsl(0, 0%, 100%);
+}
+.card--jeanette {
+  background-color: hsl(0, 0%, 100%);
+}
+.card--jeanette .card__name,
+.card--jeanette .card__status,
+.card--jeanette .card__title,
+.card--jeanette .card__subtitle {
+  color: hsl(217, 19%, 35%);
+}
+.card--patrick {
+  background-color: #19212e;
+}
+.card--patrick .card__img {
+  outline: 2px solid hsl(263, 55%, 52%);
+}
+.card--patrick .card__name,
+.card--patrick .card__status,
+.card--patrick .card__subtitle {
+  color: hsl(0, 0%, 100%);
+}
+.card--patrick .card__title {
+  color: hsl(210, 46%, 95%);
+}
+.card--kira {
+  background-color: hsl(0, 0%, 100%);
+}
+.card--kira .card__name,
+.card--kira .card__status,
+.card--kira .card__title,
+.card--kira .card__subtitle {
+  color: hsl(217, 19%, 35%);
+}
+
+@media only screen and (min-width: 900px) {
+  .testimonials-grid-section {
+    padding: 71px 0;
+  }
+
+  .card--jonathan,
+  .card--jeanette {
+    max-width: 327px;
+  }
+  .card--kira {
+    max-width: 891px;
+  }
+}
+@media only screen and (min-width: 1110px) {
+  main {
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .testimonials-grid-section {
+    padding: 0;
+    display: grid;
+    grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+    column-gap: 30px;
+    row-gap: 24px;
+  }
+
+  .card {
+    padding: 26px 32px;
+  }
+  .card__subtitle {
+    margin-top: 24px;
+  }
+  .card--daniel {
+    padding: 26px 32px 32px;
+    grid-area: daniel;
+    max-width: 540px;
+  }
+  .card--daniel .card__quote-bg {
+    top: 0;
+    right: 80px;
+  }
+  .card--daniel .card__subtitle {
+    margin-top: 16px;
+  }
+  .card--jonathan {
+    padding: 26px 32px 32px;
+    grid-area: jonathan;
+    max-width: 255px;
+  }
+  .card--jonathan .card__subtitle {
+    margin-top: 16px;
+  }
+  .card--jeanette {
+    grid-area: jeanette;
+    max-width: 255px;
+  }
+  .card--patrick {
+    grid-area: patrick;
+    max-width: 540px;
+  }
+  .card--kira {
+    grid-area: kira;
+    max-width: 255px;
+  }
+}
